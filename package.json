@@ -1,5 +1,5 @@
 {
-  "name": "parks_and_rex",
+  "name": "CaraBella",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brandynh/Project3.git"
+    "url": ""
   },
   "keywords": [
     "GraphQL",

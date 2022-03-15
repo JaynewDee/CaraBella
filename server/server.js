@@ -12,8 +12,10 @@ const { authMiddleware } = require('./utils/auth')
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+//   Allows authorization tokens and associated methods to be accessed globally
   context: authMiddleware,
 });
+
 // All route communication transfers to and through Apollo first, at the middle of the stack
 server.applyMiddleware({ app });
 
