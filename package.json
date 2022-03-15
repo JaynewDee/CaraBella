@@ -1,0 +1,55 @@
+{
+  "name": "parks_and_rex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "start": "node server/server.js",
+    "build": "cd client && npm run build",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandynh/Project3.git"
+  },
+  "keywords": [
+    "GraphQL",
+    "Mongoose",
+    "MongoDB",
+    "Express",
+    "React",
+    "E-Commerce"
+  ],
+  "authors": [
+    "Brandyn Huffer",
+    "Austin Pratt",
+    "Zach Rojas",
+    "Alex Macon",
+    "Joshua Diehl"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brandynh/Project3/issues"
+  },
+  "homepage": "https://github.com/brandynh/Project3#readme",
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "graphql": "15.8.0",
+    "react-bootstrap": "^2.1.1",
+    "react-icons": "^4.3.1",
+    "react-router-bootstrap": "^0.26.0",
+    "react-slideshow-image": "^3.6.1"
+  }
+}
