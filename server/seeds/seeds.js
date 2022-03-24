@@ -6,19 +6,6 @@ const {
 
 db.once('open', async () => {
 
-   await Perk.deleteMany();
-
-   const perks = await Perk.insertMany([
-      
-   ]);
-
-   await Package.deleteMany();
-
-   await Package.insertMany([
-      
-   ]);
-
-   await User.deleteMany();
 
    await User.create({
       username: 'Admin',
