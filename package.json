@@ -11,7 +11,7 @@
     "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "start": "node server/server.js",
+    "start": "concurrently \"node server/server.js\" \"cd client && npm start\"",
     "build": "cd client && npm run build",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\""
   },
