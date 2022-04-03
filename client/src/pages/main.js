@@ -1,12 +1,16 @@
 import React from 'react';
+import Header from '../components/Header';
 import Banner from '../components/Banner';
-import HeadSection from '../components/HeadSection';
+import MainSection from '../components/MainSection';
+import Footer from '../components/Footer';
 
 const Main = () => {
   return (
     <>
+      <Header />
       <Banner />
-      <HeadSection />
+      <MainSection />
+      <Footer />
     </>
   )
 }
