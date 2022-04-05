@@ -9,7 +9,7 @@ const Main = () => {
     <>
       <Header />
       <Banner />
-      <MainSection />
+         <MainSection />
       <Footer />
     </>
   )

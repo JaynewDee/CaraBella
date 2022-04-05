@@ -4,7 +4,7 @@ import Logo from './Logo';
 const Banner = () => {
   return (
     <div id="bannerBox">
-       <Logo />
+         <Logo />
     </div>
   )
 }

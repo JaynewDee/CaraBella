@@ -1,13 +1,30 @@
 import React from 'react'
 
 const MainSection = () => {
+
+   const andperse = '&';
+   
   return (
     <div id="mainSection">
-          <h3 id="carried"> We welcome you to get carried away ...
-          </h3>
-       
+       <div className="contentBox">
+          <div className="subBoxOne">
+            <h3 id="service">  in service of </h3>
+         </div>
+         <div className="subBoxTwo">  
+            <h2 id="wellness">
+                  WELLNESS
+            </h2>
+            <span className="andperse">
+                  {andperse}
+            </span>
+            <h2 id="beauty">
+                  BEAUTY
+            </h2>
+         </div>    
+       </div>
     </div>
   )
 }
 
 export default MainSection;
+
