@@ -76,6 +76,10 @@ a:hover {
     .link {
       font-weight: 600;
       font-size: inherit;
+      color: $tealish;
+      a {
+         color: inherit;
+      }
     }
     .divider {
       font-size: 1.3rem;
@@ -101,7 +105,9 @@ a:hover {
      font-family: $gothic;
      color: $tealish;
      width: 77%;
-
+  }
+  #contactBox p a {
+     color: inherit;
   }
 }
 
@@ -274,6 +280,9 @@ a:hover {
   }
   #bannerBox {
     margin-bottom: 0;
+  }
+  #linkBox a {
+     padding: 0.33rem;
   }
 }
 
