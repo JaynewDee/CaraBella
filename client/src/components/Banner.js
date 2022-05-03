@@ -9,7 +9,6 @@ import {
 
 
 
-import 'react-calendar/dist/Calendar.css';
 
 const Banner = () => {
   return (
