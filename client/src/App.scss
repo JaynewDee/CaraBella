@@ -3,7 +3,6 @@
 :root {
   font-size: 18px;
   caret-color: pink;
-
 }
 img {
   animation: fadeIn 3s ease-in-out forwards;
@@ -33,7 +32,7 @@ a:hover {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(225, 210, 198, 0.83);
+  background-color: rgba(225, 210, 198, 0.9);
   font-family: $nanum;
   font-size: 0.66rem;
   top: 0;
@@ -122,7 +121,7 @@ a:hover {
     font-family: $gothic;
     color: $tealish;
     width: 66%;
-    animation: fadeIn 3s ease-in-out forwards;
+    animation: fadeIn 2s ease-in-out forwards;
     .details {
       display: flex;
       flex-flow: column nowrap;
@@ -179,7 +178,7 @@ a:hover {
   font-family: $nanum;
   padding: 0;
   color: $white;
-  background-color: rgba(225, 210, 198, 0.83);
+  background-color: rgba(225, 210, 198, 0.9);
   box-shadow: 0 0px 6px rgba(0, 22, 17, 0.1), 0 0px 10px rgba(0, 22, 17, 0.1),
     0 0px 12px rgba(0, 22, 17, 0.1), 0 0px 16px rgba(0, 22, 17, 0.1),
     0 0px 32px rgba(0, 22, 17, 0.1);
@@ -277,14 +276,14 @@ a:hover {
   display: flex;
   flex-flow: row wrap;
    justify-content: center;
-   margin: 6rem auto 0;
+   margin-top: 6rem;
   width: 100vw;
   height: auto;
   z-index: -1;
   filter: saturate(.9) brightness(1.05);
 
   img {
-    width: 13rem;
+    width: 15rem;
     padding: 1rem;
   }
   img:hover {
@@ -295,10 +294,11 @@ a:hover {
    // transform: rotate(-45deg)
 }
  #frameTwo {
-   //  transform: rotate(45deg);
  }
  #frameThree {
    //  transform: rotate(135deg)
+ }
+ #frameFour {
  }
 
 #footerBox {
@@ -321,15 +321,26 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 1921px) {
+   :root {
+      font-size: 16px;
+   }
+   #bannerBox {
+      margin-bottom: 6rem;
+   }
+}
 @media screen and (max-width: 1025px) {
   :root {
     font-size: 15px;
+  }
+  #bannerBox {
+     margin-bottom: 5rem;
   }
 }
 
 @media screen and (max-width: 769px) {
   :root {
-    font-size: 13px;
+    font-size: 12px;
   }
   #mainSection {
     grid-template-columns: 100%;
@@ -342,19 +353,24 @@ a:hover {
     }
   }
   #bannerBox {
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
   }
   #linkBox a {
     padding: 1rem;
   }
 }
 
+@media screen and (max-width: 526px) {
+   #bannerBox {
+     margin-bottom: 4rem;
+   }
+}
 @media screen and (max-width: 426px) {
   :root {
-    font-size: 12px;
+    font-size: 10px;
   }
   #bannerBox {
-    margin-bottom: 0;
+    margin-bottom: 3rem;
   }
   #linkBox a {
     padding: 0.33rem;
@@ -363,6 +379,6 @@ a:hover {
 
 @media screen and (max-width: 376px) {
   :root {
-    font-size: 11px;
+    font-size: 9px;
   }
 }

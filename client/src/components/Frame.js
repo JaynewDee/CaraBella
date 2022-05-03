@@ -7,19 +7,19 @@ import CircleFrame from '../assets/circle-frame.png';
 const Frame = () => {
   return (
      <div className="frameContain">
-         <div id="frameOne">
+         <div text="frameOne"id="frameOne">
             <img alt="Wreath of framed flowers with subject text nested within" src={CircleFrame}></img>
          </div>
-         <div id="frameTwo">
+         <div text="frameTwo" style={{transform: "rotate(180deg)"}}id="frameTwo">
+            <img  style={{transform: "rotate(180deg)"}}alt="Wreath of framed flowers with subject text nested within" src={CircleFrame}></img>
+         </div>
+         <div text="frameThree" id="frameThree">
             <img alt="Wreath of framed flowers with subject text nested within" src={CircleFrame}></img>
          </div>
-         <div id="frameThree">
+         <div text="frameFour" id="frameFour">
             <img alt="Wreath of framed flowers with subject text nested within" src={CircleFrame}></img>
          </div>
-         <div id="frameFour">
-            <img alt="Wreath of framed flowers with subject text nested within" src={CircleFrame}></img>
-         </div>
-         <div id="frameFive">
+         <div text="frameFive" id="frameFive">
             <img alt="Wreath of framed flowers with subject text nested within" src={CircleFrame}></img>
          </div>
       </div>   
