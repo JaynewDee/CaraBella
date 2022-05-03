@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from '../components/Header';
-import Banner from '../components/Banner';
-import MainSection from '../components/MainSection';
-import Footer from '../components/Footer';
-import Frame from '../components/Frame';
+import Header from '../components/Header.js';
+import Banner from '../components/Banner.js';
+import MainSection from '../components/MainSection.js';
+import Footer from '../components/Footer.js';
+import Frame from '../components/Frame.js';
 
 
 const Main = () => {
