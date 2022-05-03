@@ -7,6 +7,7 @@ const Contact = () => {
    <div id="contactBox">
       <>
       <section className="details">
+         <img alt="Wreath of pink flowers along the border of the header" src={HeaderFrame}/>
          <h2>E-Mail</h2>
             <p>
                <a href="mailto:tricia@carabellaaesthetics.com">tricia@carabellaaesthetics.com</a>
@@ -15,6 +16,7 @@ const Contact = () => {
          
          
          <section className="details">
+         <img alt="Wreath of pink flowers along the border of the header" src={HeaderFrame}/>
          <h2>Phone</h2>
             <p>
                <a href="/">817-905-6050</a>

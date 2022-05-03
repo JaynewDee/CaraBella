@@ -12,8 +12,9 @@ a {
 }
 a:hover {
   cursor: url(./assets/flower.png) -5 8, auto;
+  caret-color: pink;
   color: white;
-  transform: translateZ(0.33rem) translateY(-0.33rem) scale(1.17);
+  transform: translateZ(0.33rem) scale(1.17);
   transition: all 1s;
 }
 
@@ -35,6 +36,7 @@ a:hover {
   font-family: $nanum;
   font-size: 0.66rem;
   top: 0;
+  z-index: 2;
   padding: 0.66rem;
   width: 100%;
   height: 1.33rem;
@@ -106,37 +108,57 @@ a:hover {
   #logo {
     margin: auto;
     width: 66%;
+    filter: opacity(1.3) brightness(1.1) 
   }
 
   #contactBox {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    align-items: space-between;
     font-family: $gothic;
     color: $tealish;
     width: 66%;
     animation: fadeIn 3s ease-in-out forwards;
     .details {
+      display: flex;
+      flex-flow: column nowrap;
       flex: 1 0 100%;
       max-height: 30%;
       font-size: 1rem;
+      letter-spacing: .16rem;
+      margin: 1rem;
+
     }
-    .details::before {
-       background-image: url('./assets/header-frame.png');
-       background-size: 50px;
-      
+    .details img {
+      position: absolute;
+      z-index: -1;
+      width: 7rem;
+      margin: auto;
+      left: 50%;
+      margin-top: 4.05rem;
+      transform: translate(-50%, 0);
     }
+    .details h2 {
+      margin-bottom: 2.5rem;
+    }
+    
   }
 
   #contactBox p a {
     color: inherit;
   }
+  #contactBox p a:hover {
+   color: inherit;
+ }
+  
   #contactBox button {
     background: transparent;
     color: $zambezi;
-    width: 13%;
+    width: 25%;
     height: 33%;
     margin-top: 2rem;
+    margin: auto;
     border-radius: 0.33rem;
     font-size: 0.66rem;
     border: 2px solid $tealish;
@@ -145,9 +167,8 @@ a:hover {
 
 #mainSection {
   width: 100%;
-  height: 22rem;
+  height: 12rem;
   font-family: $nanum;
-  font-size: 1rem;
   padding: 3% 11% 9%;
   padding-top: 3%;
   color: $white;
@@ -165,7 +186,7 @@ a:hover {
     .subBoxOne {
       justify-content: center;
       display: flex;
-      font-size: 1.33rem;
+      font-size: .88rem;
       margin: auto 0;
       font-style: italic;
       color: $tealish;
@@ -178,7 +199,7 @@ a:hover {
     .subBoxTwo {
       flex: 1 0 100%;
       #wellness {
-        font-size: 2rem;
+        font-size: 1.33rem;
         letter-spacing: 1rem;
         padding: 0.33rem;
         transition: transform 0.6s, box-shadow 1s, border 0.3s, color 2s;
@@ -216,7 +237,7 @@ a:hover {
       .andperse {
         color: $tealish;
         font-weight: 300;
-        font-size: 2rem;
+        font-size: 1.33rem;
         font-style: italic;
         text-decoration: overline 1px $calypso;
       }
@@ -224,7 +245,7 @@ a:hover {
       #beauty {
         letter-spacing: 0.66rem;
         line-height: 1.5;
-        font-size: 1.66rem;
+        font-size: 1rem;
         border: 1px solid $calypso;
         margin: 1rem 3rem;
         border-radius: 0.33rem;
@@ -245,25 +266,34 @@ a:hover {
     }
   }
 }
-.frameContainer {
+.frameContain {
   display: flex;
-  align-items: flex-start;
-  margin-top: 3rem;
-  margin-left: 2rem;
-  width: 100%;
+  flex-flow: row wrap;
+   justify-content: center;
+   margin: 6rem auto 0;
+  width: 100vw;
   height: auto;
+  z-index: -1;
+  filter: saturate(.7);
+
   img {
-    width: 20rem;
-    max-height: 100%;
+    width: 13rem;
+    padding: 1rem;
+    filter: opacity(.9)
   }
-  .frameOne {
-    visibility: visible;
-  }
-  .frameTwo {
-  }
-  .frameThree {
+  img:hover {
+     transform: rotate(180deg);
   }
 }
+#frameOne {
+   // transform: rotate(-45deg)
+}
+ #frameTwo {
+   //  transform: rotate(45deg);
+ }
+ #frameThree {
+   //  transform: rotate(135deg)
+ }
 
 #footerBox {
   position: relative;
