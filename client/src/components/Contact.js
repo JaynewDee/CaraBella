@@ -24,7 +24,14 @@ const Contact = () => {
          </section>
             
          <section className="details">
-            <button>Send Flowers</button>
+            <button onClick={((e) => {
+               e.preventDefault();
+               return (
+                  <form>
+                     <textarea style={{width: "66%"}}></textarea>
+                  </form>
+               )
+            })}>Compose Message</button>
          </section>
             
       </>
