@@ -3,14 +3,16 @@
 :root {
   font-size: 18px;
 }
-
+img {
+  animation: fadeIn 3s ease-in-out forwards;
+}
 a {
   padding: 1rem;
   text-decoration: none;
 }
 a:hover {
   cursor: url(./assets/flower.png) -5 8, auto;
-  mix-blend-mode: luminosity;
+  color: white;
   transform: translateZ(0.33rem) translateY(-0.33rem) scale(1.17);
   transition: all 1s;
 }
@@ -29,7 +31,7 @@ a:hover {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(225, 210, 198, .83);
+  background-color: rgba(225, 210, 198, 0.83);
   font-family: $nanum;
   font-size: 0.66rem;
   top: 0;
@@ -37,9 +39,9 @@ a:hover {
   width: 100%;
   height: 1.33rem;
   color: $tealish;
-  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.15), 0 0px 10px rgba(0, 0, 0, 0.15),
-      0 0px 12px rgba(0, 0, 0, 0.15), 0 0px 16px rgba(0, 0, 0, 0.15),
-      0 0px 32px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1), 0 0px 10px rgba(0, 0, 0, 0.1),
+    0 0px 12px rgba(0, 0, 0, 0.1), 0 0px 16px rgba(0, 0, 0, 0.1),
+    0 0px 32px rgba(0, 0, 0, 0.1);
 
   #titleWrap {
     display: flex;
@@ -51,6 +53,9 @@ a:hover {
     #brandName {
       font-size: 1rem;
     }
+    #brandName:hover {
+      cursor: url(./assets/flower.png) -5 8, auto;
+    }
     .divider {
       font-size: 1.3rem;
       color: $calypso;
@@ -59,7 +64,7 @@ a:hover {
     }
     .divider:hover {
       cursor: default;
-   }
+    }
     #subtitle {
       font-size: inherit;
       margin-left: 0.33rem;
@@ -80,7 +85,7 @@ a:hover {
       font-size: inherit;
       color: $tealish;
       a {
-         color: inherit;
+        color: inherit;
       }
     }
     .divider {
@@ -104,21 +109,37 @@ a:hover {
   }
 
   #contactBox {
-     display: flex;
-     flex-flow: column nowrap;
-     justify-content: flex-start;
-     font-family: $gothic;
-     color: $tealish;
-     width: 66%;
-     .details {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    font-family: $gothic;
+    color: $tealish;
+    width: 66%;
+    animation: fadeIn 3s ease-in-out forwards;
+    .details {
       flex: 1 0 100%;
       max-height: 30%;
+      font-size: 1rem;
+    }
+    .details::before {
+       background-image: url('./assets/header-frame.png');
+       background-size: 50px;
+      
+    }
   }
-     
-  }
-  
+
   #contactBox p a {
-     color: inherit;
+    color: inherit;
+  }
+  #contactBox button {
+    background: transparent;
+    color: $zambezi;
+    width: 13%;
+    height: 33%;
+    margin-top: 2rem;
+    border-radius: 0.33rem;
+    font-size: 0.66rem;
+    border: 2px solid $zambezi
   }
 }
 
@@ -126,15 +147,15 @@ a:hover {
   width: 100%;
   height: 22rem;
   font-family: $nanum;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 3% 11% 9%;
   padding-top: 3%;
   color: $white;
-  background-color: rgba(225, 210, 198, .83);
-  box-shadow: inset 0 0px 6px rgba(0, 0, 0, 0.15), inset 0 0px 10px rgba(0, 0, 0, 0.15),
-  inset 0 0px 12px rgba(0, 0, 0, 0.15), inset 0 0px 16px rgba(0, 0, 0, 0.15),
-  inset 0 0px 32px rgba(0, 0, 0, 0.15);
-  
+  background-color: rgba(225, 210, 198, 0.83);
+  box-shadow: 0 0px 6px rgba(0, 22, 17, 0.1), 0 0px 10px rgba(0, 22, 17, 0.1),
+    0 0px 12px rgba(0, 22, 17, 0.1), 0 0px 16px rgba(0, 22, 17, 0.1),
+    0 0px 32px rgba(0, 22, 17, 0.1);
+
   .contentBox {
     display: flex;
     justify-content: flex-start;
@@ -144,7 +165,7 @@ a:hover {
     .subBoxOne {
       justify-content: center;
       display: flex;
-      font-size: 1.66rem;
+      font-size: 1.33rem;
       margin: auto 0;
       font-style: italic;
       color: $tealish;
@@ -157,11 +178,11 @@ a:hover {
     .subBoxTwo {
       flex: 1 0 100%;
       #wellness {
-        font-size: 2.66rem;
+        font-size: 2rem;
         letter-spacing: 1rem;
         padding: 0.33rem;
-        transition: transform .6s, box-shadow 1s, border .3s, color 2s;
-        margin-top: .66rem;
+        transition: transform 0.6s, box-shadow 1s, border 0.3s, color 2s;
+        margin-top: 0.66rem;
         border-top: 2px solid $tealish;
         border-right: 2px solid white;
         border-bottom: 2px solid $tealish;
@@ -169,23 +190,22 @@ a:hover {
         border-radius: 0.33rem;
       }
       #wellness:hover {
-         box-shadow: 0 0 0.05rem 0.05rem $white;
-         transform: scale(1.05);
-         border-top: 2px solid white;
-         border-right: 2px solid $tealish;
-         border-bottom: 2px solid white;
-         border-left: 2px solid $tealish;
-         color: $calypso;
+        box-shadow: 0 0 0.05rem 0.05rem $white;
+        transform: scale(1.05);
+        border-top: 2px solid white;
+        border-right: 2px solid $tealish;
+        border-bottom: 2px solid white;
+        border-left: 2px solid $tealish;
+        color: $calypso;
       }
       #beauty:hover {
-         box-shadow: 0 0 0.05rem 0.05rem $tealish;
-         transform: scale(1.1);
-         border-top: 2px solid $tealish;
-         border-right: 2px solid white;
-         border-bottom: 2px solid $tealish;
-         border-left: 2px solid white;
-         color: $tealish;
-
+        box-shadow: 0 0 0.05rem 0.05rem $tealish;
+        transform: scale(1.1);
+        border-top: 2px solid $tealish;
+        border-right: 2px solid white;
+        border-bottom: 2px solid $tealish;
+        border-left: 2px solid white;
+        color: $tealish;
       }
 
       #wellness:hover,
@@ -204,11 +224,11 @@ a:hover {
       #beauty {
         letter-spacing: 0.66rem;
         line-height: 1.5;
-        font-size: 1.99rem;
+        font-size: 1.66rem;
         border: 1px solid $calypso;
         margin: 1rem 3rem;
         border-radius: 0.33rem;
-        transition: transform .6s, box-shadow 1s, border .3s, color 2s;
+        transition: transform 0.6s, box-shadow 1s, border 0.3s, color 2s;
         border-top: 2px solid white;
         border-right: 2px solid $tealish;
         border-bottom: 2px solid white;
@@ -226,28 +246,24 @@ a:hover {
   }
 }
 .frameContainer {
-   display: flex;
-   align-items: flex-start;
-   margin-top: 3rem;
-   margin-left: 2rem;
-   width: 100%;
-   height: auto;
-   img {
-      width: 20rem;
-      max-height: 100%;
-   }
-   .frameOne {
-      visibility: visible;
-   }
-   .frameTwo {
-      
-   }
-   .frameThree {
-   
-   }
+  display: flex;
+  align-items: flex-start;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  width: 100%;
+  height: auto;
+  img {
+    width: 20rem;
+    max-height: 100%;
+  }
+  .frameOne {
+    visibility: visible;
+  }
+  .frameTwo {
+  }
+  .frameThree {
+  }
 }
-
-
 
 #footerBox {
   position: relative;
@@ -258,6 +274,15 @@ a:hover {
   height: 18rem;
   gap: 2rem;
   padding: 6rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1025px) {
@@ -286,8 +311,8 @@ a:hover {
     margin-bottom: 4rem;
   }
   #linkBox a {
-   padding: 0.55rem;
-}
+    padding: 0.55rem;
+  }
 }
 
 @media screen and (max-width: 426px) {
@@ -298,7 +323,7 @@ a:hover {
     margin-bottom: 0;
   }
   #linkBox a {
-     padding: 0.33rem;
+    padding: 0.33rem;
   }
 }
 
