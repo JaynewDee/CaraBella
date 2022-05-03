@@ -3,18 +3,28 @@ const Contact = () => {
   return (
    <div id="contactBox">
       <>
+      <section className="details">
          <h2>E-Mail:</h2>
             <p>
-               <a href="mailto:tricia@carabellaaesthetics.com">tricia@carabella.com</a>
+               <a href="mailto:tricia@carabellaaesthetics.com">tricia@carabellaaesthetics.com</a>
             </p>
+      </section>
+         
+         
+         <section className="details">
          <h2>Phone:</h2>
             <p>
-               <a href="">817-905-6050</a>
+               <a href="/">817-905-6050</a>
             </p>
-         <h2>Location:</h2>
-            <p>
+         </section>
+            
+         <section className="details">
+            <h2>Location:</h2>
+               <p>
                
-            </p>
+               </p>
+         </section>
+            
       </>
    </div>
   )
