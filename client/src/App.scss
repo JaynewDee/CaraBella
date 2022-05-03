@@ -3,26 +3,33 @@
 :root {
   font-size: 18px;
 }
+
 a {
   padding: 1rem;
+  text-decoration: none;
 }
 a:hover {
   cursor: url(./assets/flower.png) -5 8, auto;
+  mix-blend-mode: luminosity;
+  transform: translateZ(0.33rem) translateY(-0.33rem) scale(1.17);
+  transition: all 1s;
 }
 
 .App {
+  overflow-x: hidden;
   text-align: center;
   display: flex;
   align-items: center;
   flex-flow: row wrap;
 }
+
 #fixedBar {
   position: fixed;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  background-color: $wafer;
+  background-color: $wafer-rgba;
   font-family: $nanum;
   font-size: 0.66rem;
   top: 0;
@@ -30,14 +37,14 @@ a:hover {
   width: 100%;
   height: 1.33rem;
   color: $tealish;
-  box-shadow: 0 0 5px 3px $tealish;
+  box-shadow: 0 0 5px 2px $tealish;
 
   #titleWrap {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     flex: 1 0 30%;
-    margin-left: 1rem;
+    margin-left: 2rem;
 
     #brandName {
       font-size: 1rem;
@@ -48,6 +55,9 @@ a:hover {
       font-weight: bolder;
       margin-left: 0.33rem;
     }
+    .divider:hover {
+      cursor: default;
+   }
     #subtitle {
       font-size: inherit;
       margin-left: 0.33rem;
@@ -74,75 +84,151 @@ a:hover {
     }
   }
 }
+
 #bannerBox {
   display: flex;
   justify-content: center;
   width: 100%;
   height: 24rem;
-  margin: 6rem auto 3rem;
+  margin: 7rem auto 0rem;
 
   #logo {
     margin: auto;
     width: 66%;
   }
+
+  #contactBox {
+     font-family: $gothic;
+     color: $tealish;
+     width: 77%;
+
+  }
 }
 
 #mainSection {
   width: 100%;
-  height: 100vh;
+  height: 22rem;
   font-family: $nanum;
   font-size: 1.5rem;
-  padding: 0 16%;
+  padding: 3% 11% 9%;
+  padding-top: 3%;
   color: $white;
-  background-color: $wafer;
-  box-shadow: 0 -2rem 3rem 2rem $wafer;
+  background-color: $wafer-rgba;
+  box-shadow: inset 0 0rem .5rem 0rem $tealish;
+  
   .contentBox {
     display: flex;
     justify-content: flex-start;
     flex-flow: column nowrap;
-    margin: 3rem auto;
+    margin: 1rem 22%;
+
     .subBoxOne {
-       justify-content: center;
+      justify-content: center;
       display: flex;
-      font-size: 1rem;
-      margin:  auto 0;
+      font-size: 1.66rem;
+      margin: auto 0;
       font-style: italic;
       color: $tealish;
       #service {
-         font-weight: 400;
+        font-weight: 300;
+        text-decoration: overline 1px $calypso;
       }
     }
+
     .subBoxTwo {
-      flex: 1 0 50%;
+      flex: 1 0 100%;
       #wellness {
-         font-size: 2rem;
-         text-decoration: overline $calypso 1px;
-         letter-spacing: .66rem;
-         margin: 1rem;
+        font-size: 2.66rem;
+        letter-spacing: 1rem;
+        padding: 0.33rem;
+        transition: transform .6s, box-shadow 1s, border .3s, color 2s;
+        margin-top: .66rem;
+        border-top: 2px solid $tealish;
+        border-right: 2px solid white;
+        border-bottom: 2px solid $tealish;
+        border-left: 2px solid white;
+        border-radius: 0.33rem;
       }
+      #wellness:hover {
+         box-shadow: 0 0 0.05rem 0.05rem $white;
+         transform: scale(1.05);
+         border-top: 2px solid white;
+         border-right: 2px solid $tealish;
+         border-bottom: 2px solid white;
+         border-left: 2px solid $tealish;
+         color: $calypso;
+      }
+      #beauty:hover {
+         box-shadow: 0 0 0.05rem 0.05rem $tealish;
+         transform: scale(1.1);
+         border-top: 2px solid $tealish;
+         border-right: 2px solid white;
+         border-bottom: 2px solid $tealish;
+         border-left: 2px solid white;
+         color: $tealish;
+
+      }
+
+      #wellness:hover,
+      #beauty:hover {
+        cursor: url(./assets/flower.png) -5 8, auto;
+      }
+
       .andperse {
         color: $tealish;
-        font-weight: 600;
-        font-size: 1.5rem;
+        font-weight: 300;
+        font-size: 2rem;
+        font-style: italic;
+        text-decoration: overline 1px $calypso;
       }
+
       #beauty {
-         letter-spacing: .33rem;
-         line-height: 1.5;
-         font-size: 1.5rem;
+        letter-spacing: 0.66rem;
+        line-height: 1.5;
+        font-size: 1.99rem;
+        border: 1px solid $calypso;
+        margin: 1rem 3rem;
+        border-radius: 0.33rem;
+        transition: transform .6s, box-shadow 1s, border .3s, color 2s;
+        border-top: 2px solid white;
+        border-right: 2px solid $tealish;
+        border-bottom: 2px solid white;
+        border-left: 2px solid $tealish;
       }
-      // #beauty::after {
-      //    content: "BEAUTY";
-      //    position: absolute;
-      //    text-decoration: underline $calypso 1px;
-      //    animation: blur;
-      // }
+    }
+  }
+  #palette-grid {
+    #palette {
+      height: 66%;
+      width: 66%;
+      margin: 5rem auto;
+      border-radius: 2rem;
     }
   }
 }
+.frameContainer {
+   display: flex;
+   align-items: flex-start;
+   margin-top: 3rem;
+   margin-left: 2rem;
+   width: 100%;
+   height: auto;
+   img {
+      width: 20rem;
+      max-height: 100%;
+   }
+   .frameOne {
+      visibility: visible;
+   }
+   .frameTwo {
+      
+   }
+   .frameThree {
+   
+   }
+}
 
-// @keyframes blur {
 
-// }
 
 #footerBox {
   position: relative;
@@ -159,9 +245,6 @@ a:hover {
   :root {
     font-size: 15px;
   }
-  #bannerBox {
-    margin-bottom: 6rem;
-  }
 }
 
 @media screen and (max-width: 769px) {
@@ -171,6 +254,9 @@ a:hover {
   #mainSection {
     grid-template-columns: 100%;
     grid-template-rows: 16rem 16rem 16rem;
+    .contentBox {
+      margin: 0;
+    }
   }
   #fixedBar {
     #linkBox {
@@ -178,7 +264,7 @@ a:hover {
     }
   }
   #bannerBox {
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
   }
 }
 
@@ -190,6 +276,7 @@ a:hover {
     margin-bottom: 0;
   }
 }
+
 @media screen and (max-width: 376px) {
   :root {
     font-size: 11px;

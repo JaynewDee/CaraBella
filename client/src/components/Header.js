@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 const Header = () => {
   
   const andperse = '&';
@@ -12,11 +12,12 @@ const Header = () => {
          <h2 id="subtitle"> SPA {andperse} AESTHETICS</h2>
       </div>
       <nav id="linkBox">
-            <a className="link">LOGIN</a>
+
+            <Link to="/contact" className="link">CONTACT</Link>
             <span className="divider"> | </span>
-            <a className="link">SERVICES</a>
+            <Link to="/services" className="link">SERVICES</Link>
             <span className="divider"> | </span>
-            <a className="link">ABOUT</a>
+            <Link to="/about"className="link">ABOUT</Link>
       </nav>
 
     </header>

@@ -1,10 +1,12 @@
 import React from 'react'
+// import Palette from './Palette';
 
 const MainSection = () => {
 
    const andperse = '&';
    
   return (
+     <>
     <div id="mainSection">
        <div className="contentBox">
           <div className="subBoxOne">
@@ -22,7 +24,12 @@ const MainSection = () => {
             </h2>
          </div>    
        </div>
+       {/* <Palette /> */}
     </div>
+   
+   </>
+   
+
   )
 }
 
