@@ -35,11 +35,12 @@ a:hover {
   background-color: rgba(225, 210, 198, 0.9);
   font-family: $nanum;
   font-size: 0.66rem;
+  font-weight: 900;
   top: 0;
   z-index: 2;
-  padding: 0.66rem;
+//   padding: 0.66rem;
   width: 100%;
-  height: 1.33rem;
+  height: 2.66rem;
   color: $tealish;
   box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1), 0 0px 10px rgba(0, 0, 0, 0.1),
     0 0px 12px rgba(0, 0, 0, 0.1), 0 0px 16px rgba(0, 0, 0, 0.1),
@@ -54,6 +55,8 @@ a:hover {
 
     #brandName {
       font-size: 1rem;
+      margin: auto .66rem;
+
     }
     #brandName:hover {
       cursor: url(./assets/flower.png) -5 8, auto;
@@ -62,14 +65,13 @@ a:hover {
       font-size: 1.3rem;
       color: $calypso;
       font-weight: bolder;
-      margin-left: 0.33rem;
     }
     .divider:hover {
       cursor: default;
     }
     #subtitle {
       font-size: inherit;
-      margin-left: 0.33rem;
+      margin: auto 1rem;
     }
   }
 
@@ -102,9 +104,9 @@ a:hover {
 #bannerBox {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   width: 100%;
   height: 24rem;
-  margin: 7rem auto 0rem;
 
   #logo {
     margin: auto;
@@ -113,7 +115,7 @@ a:hover {
   }
 
   #contactBox {
-     margin-top: 2rem;
+     
      display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
@@ -122,6 +124,38 @@ a:hover {
     color: $tealish;
     width: 66%;
     animation: fadeIn 2s ease-in-out forwards;
+    form {
+       position: fixed;
+       z-index: 5;
+       top: 13%;
+       left: 50%;
+       height: 66%;
+       width: 66%;
+       transform: translate(-50%, 0);
+       background-color: white;
+       border-radius: 1rem;
+       border: .11rem solid $tealish;
+       box-shadow:0 0px 6px rgba(0, 22, 17, 0.1), 
+       0 0px 12px rgba(0, 22, 17, 0.1), 0 0px 16px rgba(0, 22, 17, 0.1),
+       0 0px 32px rgba(0, 22, 17, 0.1);
+       #exit {
+         width: 3rem;
+         position: relative;
+         right: -33%;
+      }
+    }
+    
+    form button {
+      background-color: white;
+      color: pink;
+      height: 2.66rem;
+      margin-bottom: 2rem;
+      width: 6rem;
+   }
+   form input {
+      width: 50%;
+      margin: auto;
+   }
     .details {
       display: flex;
       flex-flow: column nowrap;
@@ -144,7 +178,7 @@ a:hover {
       transform: translate(-50%, 0);
     }
     .details h2 {
-      margin: 1.66rem auto .66rem;
+      margin: 1.66rem auto;
     }
     .details a:hover {
       background-color: rgba(255, 216, 228, 0.33);
@@ -159,17 +193,33 @@ a:hover {
    color: inherit;
  }
   
-  #contactBox button {
-    background: transparent;
-    color: $zambezi;
-    width: 25%;
-    height: 33%;
-    margin-top: 2rem;
-    margin: auto;
-    border-radius: 0.33rem;
-    font-size: 0.66rem;
-    border: 2px solid $tealish;
+  
+  #contactBox h2 {
+     font-size: 1.33rem;
   }
+  .CalWrap {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 88%;
+     margin: -1rem auto;
+  }
+  .buttonBox {
+     margin: 2rem auto -1rem;
+  }
+  #compose {
+   background: transparent;
+   color: rgba(255, 216, 228, 0.66);
+   width: 5rem;
+   height: 3rem;
+   margin: auto;
+   padding: .5rem;
+   border-radius: 0.33rem;
+   font-size: .88rem;
+   font-family: $gothic;
+   font-weight: 600;
+   border: .11rem solid $tealish;
+ }
 }
 
 #mainSection {
@@ -272,6 +322,7 @@ a:hover {
     }
   }
 }
+
 .frameContain {
   display: flex;
   flex-flow: row wrap;
@@ -281,18 +332,19 @@ a:hover {
   height: auto;
   z-index: -1;
   filter: saturate(.9) brightness(1.05);
-
   img {
     width: 15rem;
-    padding: 1rem;
+    padding: .66rem;
   }
+  
   img:hover {
      transform: rotate(180deg);
   }
 }
-#frameOne {
-   // transform: rotate(-45deg)
-}
+
+   
+
+
  #frameTwo {
  }
  #frameThree {
@@ -353,16 +405,30 @@ a:hover {
     }
   }
   #bannerBox {
-    margin-bottom: 8rem;
-  }
-  #linkBox a {
-    padding: 1rem;
-  }
+    margin: 3rem auto 4rem;
+    #logo {
+      width: 60%;
+   }
+   #linkBox a {
+      padding: 1rem;
+    }
+    
 }
+.CalWrap {
+   margin:5rem auto;
+   width: 100%;
+   }
+  }
+  
+   
 
 @media screen and (max-width: 526px) {
    #bannerBox {
      margin-bottom: 4rem;
+     margin-top: -1rem;
+   }
+   .CalWrap {
+      width: 10%;
    }
 }
 @media screen and (max-width: 426px) {
@@ -371,6 +437,7 @@ a:hover {
   }
   #bannerBox {
     margin-bottom: 3rem;
+    margin-top: -2rem;
   }
   #linkBox a {
     padding: 0.33rem;

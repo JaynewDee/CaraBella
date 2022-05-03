@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Main from './pages/Main.js';
 import {
    ApolloClient,
@@ -36,6 +37,9 @@ const client = new ApolloClient({
 });
 
 const App = () => {
+
+   const [fadeState, setFade] = useState()
+
    return (
       <ApolloProvider client={client}>
          <BrowserRouter>

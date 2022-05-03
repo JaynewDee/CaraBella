@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "14.x"
+    "node": "16.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -42,7 +42,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
     "graphql": "15.8.0",
-    "react-bootstrap": "^2.1.1",
     "react-calendar": "^3.7.0",
     "react-icons": "^4.3.1",
     "react-router-bootstrap": "^0.26.0",
