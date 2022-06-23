@@ -1,5 +1,5 @@
 @import "_assets";
-
+@import "./Calendar.scss";
 :root {
   font-size: 18px;
   caret-color: pink;
@@ -7,15 +7,19 @@
 img {
   animation: fadeIn 3s ease-in-out forwards;
 }
+textarea {
+  max-height: 15rem;
+}
 a {
   text-decoration: none;
+  transition: all 0.5s;
 }
 a:hover {
   cursor: url(./assets/flower.png) -5 8, auto;
   color: pink;
   transform: scale(1.17);
-  transition: all 1s;
-  border-radius: .22rem;
+  transition: all 0.5s;
+  border-radius: 0.33rem;
 }
 
 .App {
@@ -23,43 +27,52 @@ a:hover {
   text-align: center;
   display: flex;
   align-items: center;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
 }
 
+.react-calendar__viewContainer button {
+  background-color: white;
+  border: 0.11rem solid pink;
+}
+.react-calendar__viewContainer button:hover {
+  transform: scale(1.06);
+}
 #fixedBar {
   position: fixed;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(225, 210, 198, 0.9);
+  background-color: rgba(225, 210, 198, 0.95);
   font-family: $nanum;
   font-size: 0.66rem;
-  font-weight: 900;
+  font-weight: bold;
   top: 0;
   z-index: 2;
-//   padding: 0.66rem;
   width: 100%;
-  height: 2.66rem;
+  height: 2.7rem;
   color: $tealish;
   box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1), 0 0px 10px rgba(0, 0, 0, 0.1),
     0 0px 12px rgba(0, 0, 0, 0.1), 0 0px 16px rgba(0, 0, 0, 0.1),
     0 0px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
 
   #titleWrap {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    flex: 1 0 30%;
+    flex: 1 0 5rem;
     margin-left: 2rem;
 
     #brandName {
       font-size: 1rem;
-      margin: auto .66rem;
-
+      margin: auto 0.66rem;
+      transition: all 0.3s;
     }
     #brandName:hover {
       cursor: url(./assets/flower.png) -5 8, auto;
+      transform: scale(1.15);
+      transition: all 0.3s;
     }
     .divider {
       font-size: 1.3rem;
@@ -88,7 +101,7 @@ a:hover {
       font-weight: 600;
       font-size: inherit;
       color: $tealish;
-      padding: .66rem;
+      padding: 0.66rem;
       a {
         color: inherit;
       }
@@ -104,58 +117,68 @@ a:hover {
 #bannerBox {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
   width: 100%;
   height: 24rem;
+  margin-top: 4rem;
 
   #logo {
     margin: auto;
     width: 66%;
-    filter: opacity(1.3) brightness(1.1) 
+    filter: opacity(1.3) brightness(1.1);
   }
 
   #contactBox {
-     
-     display: flex;
+    position: absolute;
+    display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
     align-items: space-between;
     font-family: $gothic;
     color: $tealish;
-    width: 66%;
+    width: 80vw;
     animation: fadeIn 2s ease-in-out forwards;
     form {
-       position: fixed;
-       z-index: 5;
-       top: 13%;
-       left: 50%;
-       height: 66%;
-       width: 66%;
-       transform: translate(-50%, 0);
-       background-color: white;
-       border-radius: 1rem;
-       border: .11rem solid $tealish;
-       box-shadow:0 0px 6px rgba(0, 22, 17, 0.1), 
-       0 0px 12px rgba(0, 22, 17, 0.1), 0 0px 16px rgba(0, 22, 17, 0.1),
-       0 0px 32px rgba(0, 22, 17, 0.1);
-       #exit {
-         width: 3rem;
-         position: relative;
-         right: -33%;
+      position: absolute;
+      padding: 0 1rem;
+      z-index: 5;
+      opacity: 0;
+      top: 13%;
+      left: 50%;
+      min-height: 70vh;
+      width: 66%;
+      transform: translate(-50%, 0);
+      background-color: white;
+      border-radius: 1rem;
+      border: 0.11rem solid $tealish;
+      box-shadow: 0 0px 6px rgba(0, 22, 17, 0.1),
+        0 0px 12px rgba(0, 22, 17, 0.1), 0 0px 16px rgba(0, 22, 17, 0.1),
+        0 0px 32px rgba(0, 22, 17, 0.1);
+      animation: fadeIn 1s ease-in-out forwards;
+      #exit {
+        width: 3rem;
+        position: relative;
+        right: -33%;
+      }
+      div {
+        margin: 1rem;
       }
     }
-    
+    textarea {
+      height: 15rem;
+      margin: auto;
+      resize: none;
+    }
     form button {
       background-color: white;
       color: pink;
       height: 2.66rem;
       margin-bottom: 2rem;
       width: 6rem;
-   }
-   form input {
+    }
+    form input {
       width: 50%;
       margin: auto;
-   }
+    }
     .details {
       display: flex;
       flex-flow: column nowrap;
@@ -164,9 +187,8 @@ a:hover {
       font-size: 1rem;
       font-style: italic;
       font-weight: lighter;
-      letter-spacing: .16rem;
+      letter-spacing: 0.16rem;
       margin: 1rem;
-
     }
     .details img {
       position: absolute;
@@ -180,46 +202,37 @@ a:hover {
     .details h2 {
       margin: 1.66rem auto;
     }
-    .details a:hover {
+    .details p a:hover {
       background-color: rgba(255, 216, 228, 0.33);
+      transform: scale(1.3);
     }
-    
   }
 
   #contactBox p a {
     color: inherit;
   }
-  #contactBox p a:hover {
-   color: inherit;
- }
-  
-  
+
   #contactBox h2 {
-     font-size: 1.33rem;
+    font-size: 1.33rem;
   }
-  .CalWrap {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 88%;
-     margin: -1rem auto;
-  }
+
   .buttonBox {
-     margin: 2rem auto -1rem;
+    margin: 2rem auto -1rem;
   }
   #compose {
-   background: transparent;
-   color: rgba(255, 216, 228, 0.66);
-   width: 5rem;
-   height: 3rem;
-   margin: auto;
-   padding: .5rem;
-   border-radius: 0.33rem;
-   font-size: .88rem;
-   font-family: $gothic;
-   font-weight: 600;
-   border: .11rem solid $tealish;
- }
+    background: rgba(25, 126, 133, 0.2);
+    color: $calypso;
+    width: 5rem;
+    height: 3rem;
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 0.33rem;
+    font-size: 0.88rem;
+    font-family: $gothic;
+    font-weight: 600;
+    opacity: 0.9;
+    box-shadow: 0 4px 10px rgba(0, 22, 17, 0.2);
+  }
 }
 
 #mainSection {
@@ -229,35 +242,38 @@ a:hover {
   padding: 0;
   color: $white;
   background-color: rgba(225, 210, 198, 0.9);
-  box-shadow: 0 0px 6px rgba(0, 22, 17, 0.1), 0 0px 10px rgba(0, 22, 17, 0.1),
-    0 0px 12px rgba(0, 22, 17, 0.1), 0 0px 16px rgba(0, 22, 17, 0.1),
-    0 0px 32px rgba(0, 22, 17, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
 
   .contentBox {
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     flex-flow: column nowrap;
-    margin: 1rem 22%;
-
     .subBoxOne {
       justify-content: center;
       display: flex;
-      font-size: .88rem;
+
       margin: auto 0;
       font-style: italic;
       color: $tealish;
       #service {
+        font-size: 1rem;
         font-weight: 300;
         text-decoration: overline 1px $calypso;
       }
     }
 
     .subBoxTwo {
-      flex: 1 0 100%;
+      width: 77%;
+      max-width: 30rem;
       #wellness {
         font-size: 1.33rem;
         letter-spacing: 1rem;
-        padding: 0.33rem;
+        padding: 0.11rem 1rem;
         transition: transform 0.6s, box-shadow 1s, border 0.3s, color 2s;
         margin-top: 0.66rem;
         border-top: 2px solid $tealish;
@@ -313,45 +329,11 @@ a:hover {
       }
     }
   }
-  #palette-grid {
-    #palette {
-      height: 66%;
-      width: 66%;
-      margin: 5rem auto;
-      border-radius: 2rem;
-    }
-  }
 }
-
-.frameContain {
-  display: flex;
-  flex-flow: row wrap;
-   justify-content: center;
-   margin-top: 6rem;
-  width: 100vw;
-  height: auto;
-  z-index: -1;
-  filter: saturate(.9) brightness(1.05);
-  img {
-    width: 15rem;
-    padding: .66rem;
-  }
-  
-  img:hover {
-     transform: rotate(180deg);
-  }
+.introWhite {
+  height: 12rem;
+  display: block;
 }
-
-   
-
-
- #frameTwo {
- }
- #frameThree {
-   //  transform: rotate(135deg)
- }
- #frameFour {
- }
 
 #footerBox {
   position: relative;
@@ -374,19 +356,13 @@ a:hover {
 }
 
 @media screen and (max-width: 1921px) {
-   :root {
-      font-size: 16px;
-   }
-   #bannerBox {
-      margin-bottom: 6rem;
-   }
+  :root {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 1025px) {
   :root {
     font-size: 15px;
-  }
-  #bannerBox {
-     margin-bottom: 5rem;
   }
 }
 
@@ -397,6 +373,7 @@ a:hover {
   #mainSection {
     grid-template-columns: 100%;
     grid-template-rows: 16rem 16rem 16rem;
+    margin-top: 3rem;
   }
   #fixedBar {
     #linkBox {
@@ -405,42 +382,19 @@ a:hover {
     }
   }
   #bannerBox {
-    margin: 3rem auto 4rem;
-    #logo {
-      width: 60%;
-   }
-   #linkBox a {
-      padding: 1rem;
-    }
-    
-}
-.CalWrap {
-   margin:5rem auto;
-   width: 100%;
-   }
+    margin-bottom: 3rem;
   }
-  
-   
-
-@media screen and (max-width: 526px) {
-   #bannerBox {
-     margin-bottom: 4rem;
-     margin-top: -1rem;
-   }
-   .CalWrap {
-      width: 10%;
-   }
 }
+
 @media screen and (max-width: 426px) {
   :root {
     font-size: 10px;
   }
-  #bannerBox {
-    margin-bottom: 3rem;
-    margin-top: -2rem;
-  }
   #linkBox a {
     padding: 0.33rem;
+  }
+  #bannerBox {
+    margin-bottom: 1rem;
   }
 }
 

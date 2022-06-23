@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Calendar } from 'react-calendar';
-
+import React, { useState } from "react";
+import { Calendar } from "react-calendar";
 
 const CalNode = () => {
-   const [value, onChange] = useState(new Date());
+  const [value, onChange] = useState(new Date());
 
   return (
-    <div className="CalWrap">
-       <Calendar style={{width: "66vw"}}/>
-    </div>
+    <>
+      <p>Stay tuned while our calendar is being built!</p>
+      {/* <Calendar style={{width: "66vw"}}/> */}
+    </>
   );
-}
+};
 
 export default CalNode;
