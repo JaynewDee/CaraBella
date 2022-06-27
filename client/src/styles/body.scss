@@ -1,0 +1,21 @@
+@import "./assets";
+
+#bodyBox {
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-items: center;
+  align-items: center;
+  background-size: contain;
+  border: none;
+  outline: none;
+  padding: none;
+  margin-top: 8.5rem;
+  background-color: rgba(25, 126, 133, 1);
+  box-shadow: 0 0 -5rem 0.66rem rgba(25, 126, 133, 0.9);
+  .selfie {
+    width: 33%;
+    border-radius: 50%;
+    margin: 6rem auto;
+  }
+}

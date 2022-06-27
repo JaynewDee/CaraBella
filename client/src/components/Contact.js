@@ -131,7 +131,7 @@ const Contact = () => {
                   variant="primary"
                   type="submit"
                 >
-                  Submit
+                  Send
                 </Button>
               </Form>
             </>

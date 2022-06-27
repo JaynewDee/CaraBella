@@ -1,7 +1,7 @@
 import React from "react";
 // import Palette from './Palette';
 
-const MainSection = () => {
+const ServiceSection = () => {
   const andperse = "&";
 
   return (
@@ -23,4 +23,4 @@ const MainSection = () => {
   );
 };
 
-export default MainSection;
+export default ServiceSection;
