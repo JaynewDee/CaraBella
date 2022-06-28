@@ -14,36 +14,42 @@
   .aboutSection {
     display: flex;
     flex-flow: row nowrap;
-    justify-items: flex-start;
-    align-items: flex-start;
+    width: 100%;
+    .section-wrap {
+      display: flex;
+      justify-content: flex-end;
 
-    .selfie {
-      float: left;
-      width: 33%;
-      border-radius: 50%;
-      margin: 0 1rem 5% 5rem;
-      border: 3px solid $calypso;
-    }
-    .selfie-section > h3 {
-      color: white;
-      margin-top: 15%;
-      margin-right: 25%;
-      padding-bottom: 1rem;
-      text-align: right;
-      border-bottom: 2px solid $calypso;
-      font-size: 2rem;
-    }
-    .selfie-section > p {
-      text-align: right;
-      color: white;
-      font-size: 1.33rem;
-      margin: 5% 20%;
-      margin-left: 0rem;
-      border-right: 2px solid $calypso;
-      padding-right: 3rem;
-      font-style: italic;
+      .selfie {
+        float: left;
+        width: 33%;
+        border-radius: 50%;
+        margin: 0 1rem 5% 10%;
+        border: 3px solid $calypso;
+      }
+      .selfie-section > h3 {
+        color: white;
+        margin-top: 15%;
+        margin-left: auto;
+        margin-right: 35%;
+        padding-bottom: 1rem;
+        text-align: right;
+        border-bottom: 2px solid $calypso;
+        font-size: 2rem;
+        width: 25%;
+      }
+      .selfie-section > p {
+        text-align: right;
+        color: white;
+        font-size: 1.33rem;
+        margin: 15%;
+        margin-left: 0rem;
+        border-right: 2px solid $calypso;
+        padding-right: 3rem;
+        font-style: italic;
+      }
     }
     .experience-section > h3 {
+      width: 33%;
       font-size: 2rem;
       color: white;
       text-align: left;

@@ -7,24 +7,26 @@ const Body = () => {
     <div id="bodyBox">
       <HRule />
       <div className="aboutSection">
-        <img className="selfie" alt="" src={Selfie}></img>
-        <div className="selfie-section">
-          <h3>Foundations</h3>
-          <p>
-            Tricia Kelly founded Cara Bella in 2022 out of a profound passion
-            for skincare and holistic wellness.
-          </p>
+        <div className="section-wrap">
+          <img className="selfie" alt="" src={Selfie}></img>
+          <div className="selfie-section">
+            <h3>Foundations</h3>
+            <p>
+              Tricia Kelly founded Cara Bella in 2022 out of a profound passion
+              for skincare and holistic wellness.
+            </p>
+          </div>
         </div>
       </div>
       <div className="aboutSection">
         <div className="experience-section">
           <h3>Experience</h3>
           <p>
-            A Board-Certified Family Nurse Practitioner with over 25 years as a
-            registered dental hygienist, 10 years as registered nurse, and 5
-            years as family nurse practitioner, Tricia wishes to utilize her
-            wealth of medical experience to spread the joy of a healthy and
-            vibrant life.
+            A Board-Certified Family Nurse Practitioner with over 25 years'
+            experience as a registered dental hygienist, 10 years as registered
+            nurse, and 5 years as family nurse practitioner, Tricia wishes to
+            utilize her wealth of medical experience to spread the joy of a
+            healthy and vibrant life.
           </p>
         </div>
       </div>

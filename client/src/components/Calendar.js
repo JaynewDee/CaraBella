@@ -10,7 +10,7 @@ const CalNode = () => {
         style={{
           fontStyle: "italic",
           fontSize: "1.66rem",
-          color: "pink",
+          color: "#9c7c7a",
           width: "33%",
         }}
       >
