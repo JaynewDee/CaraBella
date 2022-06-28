@@ -6,7 +6,16 @@ const CalNode = () => {
 
   return (
     <>
-      <p>Stay tuned while our calendar is being built!</p>
+      <p
+        style={{
+          fontStyle: "italic",
+          fontSize: "1.66rem",
+          color: "pink",
+          width: "33%",
+        }}
+      >
+        Stay tuned while our calendar is being built!
+      </p>
       {/* <Calendar style={{width: "66vw"}}/> */}
     </>
   );

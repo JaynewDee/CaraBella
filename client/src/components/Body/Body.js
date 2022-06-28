@@ -1,15 +1,44 @@
 import React from "react";
 import Selfie from "../../assets/Bio_pic.png";
+import HRule from "../HRule";
 
 const Body = () => {
   return (
     <div id="bodyBox">
       {/* Iterable info sections */}
-      <div style={{ width: "100vw" }}>
+      <div className="aboutSection">
         <img className="selfie" alt="" src={Selfie}></img>
+        <div className="selfie-section">
+          <h3>Foundations</h3>
+          <p>
+            Tricia Kelly founded Cara Bella in 2022 out of a profound passion
+            for skincare and holistic wellness.
+          </p>
+        </div>
       </div>
-      <div style={{ width: "100vw" }}></div>
-      <div style={{ width: "100vw" }}></div>
+      <div className="aboutSection">
+        <div className="experience-section">
+          <h3>Experience</h3>
+          <p>
+            A Board-Certified Family Nurse Practitioner with over 25 years as a
+            registered dental hygienist, 10 years as registered nurse, and 5
+            years as family nurse practitioner, Tricia wishes to utilize her
+            wealth of medical experience to spread the joy of a healthy and
+            vibrant life.
+          </p>
+        </div>
+      </div>
+      <div className="aboutSection">
+        <div className="inspiration-section">
+          <h3>Inspiration</h3>
+          <p>
+            With advances in the emerging science of anti-aging, it has never
+            been easier or more affordable to make a meaningful cosmetic change,
+            and we'll be right there with you every step of the way!
+          </p>
+        </div>
+      </div>
+      <HRule />
     </div>
   );
 };

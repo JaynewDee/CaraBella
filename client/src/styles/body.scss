@@ -3,19 +3,113 @@
 #bodyBox {
   width: 100vw;
   display: flex;
-  flex-flow: column nowrap;
-  justify-items: center;
-  align-items: center;
-  background-size: contain;
+  flex-flow: row wrap;
+  justify-items: flex-start;
+  align-items: flex-start;
   border: none;
+  border-top: 3px solid $calypso;
   outline: none;
   padding: none;
-  margin-top: 8.5rem;
   background-color: rgba(25, 126, 133, 1);
   box-shadow: 0 0 -5rem 0.66rem rgba(25, 126, 133, 0.9);
-  .selfie {
-    width: 33%;
-    border-radius: 50%;
-    margin: 6rem auto;
+  .aboutSection {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: flex-start;
+    align-items: flex-start;
+
+    .selfie {
+      float: left;
+      width: 33%;
+      border-radius: 50%;
+      margin: 10% 1rem 5% 5rem;
+      border: 3px solid $calypso;
+    }
+    .selfie-section > h3 {
+      color: white;
+      margin-top: 25%;
+      margin-right: 25%;
+      padding-bottom: 1rem;
+      text-align: right;
+      border-bottom: 2px solid $calypso;
+      font-size: 2rem;
+    }
+    .selfie-section > p {
+      text-align: right;
+      color: white;
+      font-size: 1.33rem;
+      margin: 5% 20%;
+      margin-left: 0rem;
+      border-right: 2px solid $calypso;
+      padding: 0 5rem;
+      font-style: italic;
+    }
+    .experience-section > h3 {
+      font-size: 2rem;
+      color: white;
+      text-align: left;
+      margin-left: 15%;
+      border-bottom: 2px solid $calypso;
+      padding-bottom: 1rem;
+      width: 66%;
+    }
+    .experience-section > p {
+      width: 66%;
+      padding: 0 5rem;
+      margin-top: 5%;
+      margin-left: 12%;
+      text-align: left;
+      color: white;
+      font-size: 1.33rem;
+      border-left: 2px solid $calypso;
+      font-style: italic;
+    }
+    .inspiration-section > h3 {
+      width: 66%;
+      color: white;
+      margin: 5% 15%;
+      margin-left: auto;
+      padding-bottom: 1rem;
+      text-align: right;
+      border-bottom: 2px solid $calypso;
+      font-size: 2rem;
+    }
+    .inspiration-section > p {
+      width: 66%;
+      text-align: right;
+      color: white;
+      font-size: 1.33rem;
+      margin: 5% 12%;
+      margin-left: auto;
+      border-right: 2px solid $calypso;
+      padding: 0 5rem;
+      font-style: italic;
+    }
+  }
+  .horizontal-rule {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 66vw;
+    border: none;
+    margin: 8.5rem auto;
+    border-radius: 100%;
+    .left-rule {
+      height: 4px;
+      background-color: $calypso;
+      width: 33%;
+      border-radius: 100%;
+    }
+    .icon {
+      margin: 0 1rem;
+      color: white;
+    }
+    .right-rule {
+      height: 4px;
+      background-color: $calypso;
+      width: 33%;
+      border-radius: 100%;
+    }
   }
 }

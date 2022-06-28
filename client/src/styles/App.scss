@@ -46,12 +46,12 @@ a:hover {
   justify-content: space-between;
   background-color: rgba(225, 210, 198, 1);
   font-family: $nanum;
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   font-weight: bold;
   top: 0;
   z-index: 5;
   width: 100%;
-  height: 2.7rem;
+  height: 3.33rem;
   color: $tealish;
   box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1), 0 0px 10px rgba(0, 0, 0, 0.1),
     0 0px 12px rgba(0, 0, 0, 0.1), 0 0px 16px rgba(0, 0, 0, 0.1),
@@ -66,7 +66,7 @@ a:hover {
     margin-left: 2rem;
 
     #brandName {
-      font-size: 1rem;
+      font-size: 1.33rem;
       margin: auto 0.66rem;
       transition: all 0.3s;
     }
@@ -96,7 +96,7 @@ a:hover {
     justify-content: flex-end;
     flex: 1 0 30%;
     margin-right: 3rem;
-    font-size: 0.66rem;
+    font-size: 0.75rem;
 
     .link {
       font-weight: 600;
@@ -345,8 +345,7 @@ a:hover {
   position: relative;
   z-index: 5;
   width: 100vw;
-  gap: 2rem;
-
+  margin-top: 2rem;
   img {
     filter: opacity(0.2);
   }
@@ -354,9 +353,9 @@ a:hover {
     color: $tealish;
     position: relative;
     width: 50vw;
-    margin: 0 auto;
-    top: -18rem;
-    font-size: 1.33rem;
+    margin: 0 auto 1rem;
+    top: -19rem;
+    font-size: 1.66rem;
     font-style: italic;
     font-family: $nanum;
   }
@@ -374,20 +373,20 @@ a:hover {
     width: 100%;
     height: 10%;
     font-family: $nanum;
-    background: rgba(25, 126, 133, 0.9);
-    padding: 1rem;
+    background: rgba(25, 126, 133, 1);
     .fullname::before {
       content: "";
       background-color: $zambezi;
     }
     .fullname {
-      margin-top: 0.66rem;
+      margin-top: 3rem;
       font-size: 2rem;
       color: white;
     }
     .contacts {
       display: flex;
       flex-flow: column nowrap;
+      margin-bottom: 3rem;
     }
   }
   .details > p > a {
@@ -423,6 +422,9 @@ a:hover {
   #mainSection {
     margin-top: 5rem;
   }
+  #fixedBar {
+    height: 4rem;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -433,6 +435,10 @@ a:hover {
     margin-top: 3rem;
   }
   #fixedBar {
+    padding: 0.33rem;
+    #titleWrap {
+      margin: 0.33rem auto 0.33rem 2rem;
+    }
     #linkBox {
       margin-right: 0.33rem;
       padding: 1rem;

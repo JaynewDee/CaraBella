@@ -37,17 +37,29 @@ const Header = () => {
       </div>
 
       <nav id="linkBox">
-        <Link to="/contact" className="link">
+        <Link
+          to="/contact"
+          className="link"
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
           CONTACT
         </Link>
         <span className="divider"> | </span>
-        <Link to="/schedule" className="link">
+        <Link
+          to="/schedule"
+          className="link"
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
           SCHEDULE
         </Link>
         <span className="divider"> | </span>
-        <Link to="/about" className="link">
+        <a href="#bodyBox" className="link">
           ABOUT
-        </Link>
+        </a>
       </nav>
     </header>
   );
