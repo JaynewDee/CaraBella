@@ -17,11 +17,9 @@ const Footer = () => {
         <h3 className="fullname"> Tricia Kelly </h3>
         <p className="contacts">
           <a href="mailto:tricia@carabellaaesthetics.com">
-            <span>{">"}</span> tricia@carabellaaesthetics.com <span>{"<"}</span>
+            tricia@carabellaaesthetics.com
           </a>
-          <a href="mailto:tricia@carabellaaesthetics.com">
-            <span>{">"}</span> 1-817-905-6050 <span>{"<"}</span>
-          </a>
+          <a href="mailto:tricia@carabellaaesthetics.com">1-817-905-6050</a>
         </p>
       </section>
     </footer>

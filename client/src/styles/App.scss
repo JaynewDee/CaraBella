@@ -18,7 +18,7 @@ a {
 a:hover {
   cursor: url(../assets/flower.png) -5 8, auto;
   color: pink;
-  transform: scale(1.17);
+  transform: scale(1.1);
   transition: all 0.5s;
   border-radius: 0.33rem;
 }
@@ -380,20 +380,23 @@ a:hover {
     }
     .fullname {
       margin-top: 3rem;
-      font-size: 2rem;
+      font-size: 1.66rem;
       color: white;
+      width: 100%;
     }
     .contacts {
       display: flex;
       flex-flow: column nowrap;
       margin-bottom: 3rem;
+      width: 100%;
     }
   }
   .details > p > a {
     color: white;
+    text-decoration: underline;
+
     span {
       color: $zambezi;
-      font-size: 2.33rem;
     }
   }
 }

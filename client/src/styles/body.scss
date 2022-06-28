@@ -7,7 +7,6 @@
   justify-items: flex-start;
   align-items: flex-start;
   border: none;
-  border-top: 3px solid $calypso;
   outline: none;
   padding: none;
   background-color: rgba(25, 126, 133, 1);
@@ -41,7 +40,7 @@
       margin: 5% 20%;
       margin-left: 0rem;
       border-right: 2px solid $calypso;
-      padding: 0 5rem;
+      padding-right: 3rem;
       font-style: italic;
     }
     .experience-section > h3 {
@@ -55,7 +54,7 @@
     }
     .experience-section > p {
       width: 66%;
-      padding: 0 5rem;
+      padding-left: 3rem;
       margin-top: 5%;
       margin-left: 12%;
       text-align: left;
@@ -82,7 +81,7 @@
       margin: 5% 12%;
       margin-left: auto;
       border-right: 2px solid $calypso;
-      padding: 0 5rem;
+      padding-right: 3rem;
       font-style: italic;
     }
   }
