@@ -5,7 +5,7 @@ import HRule from "../HRule";
 const Body = () => {
   return (
     <div id="bodyBox">
-      {/* Iterable info sections */}
+      <HRule />
       <div className="aboutSection">
         <img className="selfie" alt="" src={Selfie}></img>
         <div className="selfie-section">

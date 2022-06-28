@@ -10,7 +10,7 @@
   outline: none;
   padding: none;
   background-color: rgba(25, 126, 133, 1);
-  box-shadow: 0 0 -5rem 0.66rem rgba(25, 126, 133, 0.9);
+  box-shadow: 0 -5px 20px 5px rgba(0, 22, 17, 0.3);
   .aboutSection {
     display: flex;
     flex-flow: row nowrap;
@@ -21,12 +21,12 @@
       float: left;
       width: 33%;
       border-radius: 50%;
-      margin: 10% 1rem 5% 5rem;
+      margin: 0 1rem 5% 5rem;
       border: 3px solid $calypso;
     }
     .selfie-section > h3 {
       color: white;
-      margin-top: 25%;
+      margin-top: 15%;
       margin-right: 25%;
       padding-bottom: 1rem;
       text-align: right;
@@ -66,7 +66,7 @@
     .inspiration-section > h3 {
       width: 66%;
       color: white;
-      margin: 5% 15%;
+      margin: 10% 15%;
       margin-left: auto;
       padding-bottom: 1rem;
       text-align: right;
@@ -84,6 +84,10 @@
       padding-right: 3rem;
       font-style: italic;
     }
+  }
+  .aboutSection > div > h3 {
+    font-family: $nanum;
+    font-weight: bolder;
   }
   .horizontal-rule {
     display: flex;
