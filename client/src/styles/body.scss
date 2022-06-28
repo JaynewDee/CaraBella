@@ -14,55 +14,39 @@
   .aboutSection {
     display: flex;
     flex-flow: row nowrap;
-    width: 100%;
-    .section-wrap {
-      display: flex;
-      justify-content: flex-end;
-
-      .selfie {
-        float: left;
-        width: 33%;
-        border-radius: 50%;
-        margin: 0 1rem 5% 10%;
-        border: 3px solid $calypso;
-      }
-      .selfie-section > h3 {
-        color: white;
-        margin-top: 15%;
-        margin-left: auto;
-        margin-right: 35%;
-        padding-bottom: 1rem;
-        text-align: right;
-        border-bottom: 2px solid $calypso;
-        font-size: 2rem;
-        width: 25%;
-      }
-      .selfie-section > p {
-        text-align: right;
-        color: white;
-        font-size: 1.33rem;
-        margin: 15%;
-        margin-left: 0rem;
-        border-right: 2px solid $calypso;
-        padding-right: 3rem;
-        font-style: italic;
-      }
+    width: 77%;
+    margin: 3rem auto 0;
+    .selfie {
+      float: left;
+      border-radius: 50%;
+      border: 3px solid $calypso;
+      width: 15rem;
+      height: 15rem;
     }
+    .selfie-section > h3 {
+      color: white;
+      text-align: right;
+      border-bottom: 2px solid $calypso;
+      font-size: 2rem;
+    }
+    .selfie-section > p {
+      text-align: right;
+      color: white;
+      font-size: 1.33rem;
+      border-right: 2px solid $calypso;
+      font-style: italic;
+      margin-top: 2rem;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
     .experience-section > h3 {
-      width: 33%;
       font-size: 2rem;
       color: white;
       text-align: left;
-      margin-left: 15%;
       border-bottom: 2px solid $calypso;
-      padding-bottom: 1rem;
-      width: 66%;
     }
     .experience-section > p {
-      width: 66%;
-      padding-left: 3rem;
-      margin-top: 5%;
-      margin-left: 12%;
       text-align: left;
       color: white;
       font-size: 1.33rem;
@@ -70,30 +54,29 @@
       font-style: italic;
     }
     .inspiration-section > h3 {
-      width: 66%;
       color: white;
-      margin: 10% 15%;
-      margin-left: auto;
-      padding-bottom: 1rem;
       text-align: right;
       border-bottom: 2px solid $calypso;
       font-size: 2rem;
     }
     .inspiration-section > p {
-      width: 66%;
       text-align: right;
       color: white;
       font-size: 1.33rem;
-      margin: 5% 12%;
-      margin-left: auto;
       border-right: 2px solid $calypso;
-      padding-right: 3rem;
       font-style: italic;
     }
   }
   .aboutSection > div > h3 {
     font-family: $nanum;
     font-weight: bolder;
+    padding: 0.66rem;
+  }
+  .aboutSection > div > p {
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   .horizontal-rule {
     display: flex;
@@ -102,8 +85,8 @@
     align-items: center;
     width: 66vw;
     border: none;
-    margin: 8.5rem auto;
     border-radius: 100%;
+    margin: 6rem auto;
     .left-rule {
       height: 4px;
       background-color: $calypso;

@@ -7,15 +7,13 @@ const Body = () => {
     <div id="bodyBox">
       <HRule />
       <div className="aboutSection">
-        <div className="section-wrap">
-          <img className="selfie" alt="" src={Selfie}></img>
-          <div className="selfie-section">
-            <h3>Foundations</h3>
-            <p>
-              Tricia Kelly founded Cara Bella in 2022 out of a profound passion
-              for skincare and holistic wellness.
-            </p>
-          </div>
+        <img className="selfie" alt="" src={Selfie}></img>
+        <div className="selfie-section">
+          <h3>Foundations</h3>
+          <p>
+            Tricia Kelly founded Cara Bella in 2022 out of a profound passion
+            for skincare and holistic wellness.
+          </p>
         </div>
       </div>
       <div className="aboutSection">
