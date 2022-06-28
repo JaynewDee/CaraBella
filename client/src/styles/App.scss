@@ -349,19 +349,25 @@ a:hover {
   z-index: 5;
   width: 100vw;
   margin-top: 2rem;
-  img {
-    filter: opacity(0.2);
+  .flower-box {
+    img {
+      filter: opacity(0.2);
+      height: 15rem;
+      margin-bottom: -5rem;
+      z-index: -1;
+    }
+    .reach-out {
+      color: $tealish;
+      position: relative;
+      width: 50vw;
+      margin: 2rem auto 3rem;
+      top: -7rem;
+      font-size: 1.66rem;
+      font-style: italic;
+      font-family: $nanum;
+    }
   }
-  .reach-out {
-    color: $tealish;
-    position: relative;
-    width: 50vw;
-    margin: 0 auto 1rem;
-    top: -19rem;
-    font-size: 1.66rem;
-    font-style: italic;
-    font-family: $nanum;
-  }
+
   .details {
     display: flex;
     flex-flow: column nowrap;
